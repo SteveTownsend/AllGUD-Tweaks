@@ -401,6 +401,7 @@ Scriptname AGUD_System extends ReferenceAlias
 ;##############################
 	Event OnInit()
 		;Trace("AllGUD-OnInit Event")
+		PlayerRef = Game.GetPlayer()
 		RegisterForSingleUpdate(2.0)
 	EndEvent
 
@@ -419,7 +420,6 @@ Scriptname AGUD_System extends ReferenceAlias
 		;Trace("AllGUD-Updating")
 		bAllGUDMaintenance = True
 		fVersion = 1.55
-		PlayerRef = Game.GetPlayer()
 		
 		;Someone had a problem with not having display at start so...
 		bDisplayPWeapon = True
